@@ -5,14 +5,16 @@ import Nav from "./Nav";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex justify-between items-center mt-6 bg-white">
+    <nav className="w-full flex justify-between items-center mt-6 bg-white ">
       <div className="flex justify-between gap-4">
         <Logo />
         <Nav />
       </div>
-      <div>
-        <Buttons></Buttons>
-        <Buttons></Buttons>
+      <div className="flex gap-2 py-2">
+        <Buttons bgColor="#fff" textColor=" #34313d">
+          Login
+        </Buttons>
+        <Buttons>Sign Up</Buttons>
       </div>
     </nav>
   );
