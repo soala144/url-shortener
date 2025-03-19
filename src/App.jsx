@@ -2,7 +2,7 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div>
+    <div className="flex w-3/4 m-auto">
       <Navbar />
     </div>
   );
