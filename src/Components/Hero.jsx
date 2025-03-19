@@ -4,7 +4,7 @@ import HeroImg from "./HeroImg";
 
 const Hero = () => {
   return (
-    <div className="w-full flex justify-between items-center m-auto bg-white mt-16 ">
+    <div className=" w-3/4 flex justify-between items-center m-auto bg-white mt-16 ">
       <HeroText />
       <HeroImg />
     </div>

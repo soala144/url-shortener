@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex justify-between items-center mt-6 bg-white ">
+    <nav className=" w-3/4 flex justify-between items-center mt-6 bg-white m-auto">
       <div className="flex justify-between gap-4">
         <Logo />
         <Nav />
