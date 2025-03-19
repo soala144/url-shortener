@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroImg = () => {
   return (
-    <div className="w-1/4 m-auto">
+    <div className="w-1/2 center">
       <img src="src\assets\images\illustration-working.svg" alt="heroImg" />
     </div>
   );
