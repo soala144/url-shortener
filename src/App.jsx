@@ -8,8 +8,8 @@ function App() {
     <div className="flex flex-col m-auto w-full">
       <Navbar />
       <Hero />
-      <div className="bg-grey mt-16 ">
-        <InputSection />
+      <InputSection />
+      <div className="bg-grey relative">
         <Statistics />
       </div>
     </div>
