@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 const InputSection = () => {
   return (
     <div
-      className="w-3/4 m-auto  "
+      className="w-3/4 m-auto opacity-80 "
       style={{
         background: "url('src/assets/images/bg-shorten-desktop.svg'), #3a3054",
       }}

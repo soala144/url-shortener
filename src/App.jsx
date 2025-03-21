@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <InputSection />
-      <div className="bg-grey relative">
+      <div className="bg-grey mt-[-40px]">
         <Statistics />
       </div>
     </div>
