@@ -6,12 +6,18 @@ const InputSection = () => {
     <div
       className="w-3/4 m-auto "
       style={{
-        backgroundImage: "url('src/assets/images/bg-shorten-desktop.svg')",
+        background: "url('src/assets/images/bg-shorten-desktop.svg'), #3a3054",
       }}
     >
       <div className="w-3/4 p-4 flex justify-between items-center rounded-lg m-auto">
-        <input type="text" placeholder="place a URL" className="bg-gray" />
-        <Buttons borderRadius="4px">Shorten URL</Buttons>
+        <input
+          type="text"
+          placeholder="place a URL"
+          className="bg-white w-3/4 h-10 rounded p-2"
+        />
+        <Buttons borderRadius="4px" className="w-2/5">
+          Shorten URL
+        </Buttons>
       </div>
     </div>
   );
