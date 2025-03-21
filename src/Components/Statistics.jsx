@@ -12,6 +12,20 @@ const Statistics = () => {
           advanced statistics dashboard.
         </p>
       </div>
+      <div>
+        <div className="">
+          <img
+            src="src/assets/images/bg-shorten-desktop.svg"
+            alt=""
+            className="h-10 w-10 rounded-full"
+          />
+          <h4>Brand Recognition</h4>
+          <p>
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
