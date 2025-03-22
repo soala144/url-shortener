@@ -31,25 +31,26 @@ const Statistics = () => {
           advanced statistics dashboard.
         </p>
       </div>
-      <div className="flex w-full m-auto ">
-        {statistics.map((stats) => {
+      <div className="flex w-full m-auto mt-20">
+        {statistics.map((stats) => (
           <>
             <div className="w-[30%] bg-white p-3  relative">
-              <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2">
+              <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2 h-10 w-10 justify-center flex items-center">
                 <img
-                  src="src/assets/images/icon-brand-recognition.svg"
+                  src={stats.img}
                   alt=""
-                  className=" h-10 w-10 object-contain "
+                  className=" w-1/2 m-auto object-contain "
                 />
               </figure>
-              <h4 className="text-primary  font-bold text-2xl">
+              <h4 className="text-primary my-4 font-bold text-2xl">
                 {stats.title}
               </h4>
               <p className="">{stats.description}</p>
             </div>
+
             <div className="w-[4%] bg-green h-1 items-center mt-[80px]"></div>
-          </>;
-        })}
+          </>
+        ))}
       </div>
     </div>
   );
