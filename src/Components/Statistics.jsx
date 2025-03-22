@@ -1,5 +1,24 @@
 import React from "react";
-
+const statistics = [
+  {
+    title: "Brand Recognition",
+    description:
+      "Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.",
+    img: "src/assets/images/icon-brand-recognition.svg",
+  },
+  {
+    title: "Detailed Records",
+    description:
+      "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
+    img: "src/assets/images/icon-detailed-records.svg",
+  },
+  {
+    title: "Fully Customizable",
+    description:
+      "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
+    img: "src/assets/images/icon-fully-customizable.svg",
+  },
+];
 const Statistics = () => {
   return (
     <div className="w-3/4 m-auto pt-30 ">
@@ -12,19 +31,25 @@ const Statistics = () => {
           advanced statistics dashboard.
         </p>
       </div>
-      <div>
-        <div className="">
-          <img
-            src="src/assets/images/bg-shorten-desktop.svg"
-            alt=""
-            className="h-10 w-10 rounded-full"
-          />
-          <h4>Brand Recognition</h4>
-          <p>
-            Boost your brand recognition with each click. Generic links don’t
-            mean a thing. Branded links help instil confidence in your content.
-          </p>
-        </div>
+      <div className="flex w-full m-auto ">
+        {statistics.map((stats) => {
+          <>
+            <div className="w-[30%] bg-white p-3  relative">
+              <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2">
+                <img
+                  src="src/assets/images/icon-brand-recognition.svg"
+                  alt=""
+                  className=" h-10 w-10 object-contain "
+                />
+              </figure>
+              <h4 className="text-primary  font-bold text-2xl">
+                {stats.title}
+              </h4>
+              <p className="">{stats.description}</p>
+            </div>
+            <div className="w-[4%] bg-green h-1 items-center mt-[80px]"></div>
+          </>;
+        })}
       </div>
     </div>
   );
