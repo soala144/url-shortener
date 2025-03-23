@@ -1,3 +1,4 @@
+import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import InputSection from "./Components/InputSection";
 import Navbar from "./Components/Navbar";
@@ -12,6 +13,7 @@ function App() {
       <div className="bg-grey mt-[-40px]">
         <Statistics />
       </div>
+      <Footer />
     </div>
   );
 }
