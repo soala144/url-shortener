@@ -19,6 +19,7 @@ const statistics = [
     img: "src/assets/images/icon-fully-customizable.svg",
   },
 ];
+
 const Statistics = () => {
   return (
     <div className="w-3/4 m-auto pt-30 ">
@@ -32,9 +33,9 @@ const Statistics = () => {
         </p>
       </div>
       <div className="flex w-full m-auto mt-20">
-        {statistics.map((stats) => (
+        {statistics.map((stats, index) => (
           <>
-            <div className="w-[45%] bg-white px-5 relative">
+            <div className="w-[45%] bg-white px-5 relative" key={index}>
               <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2 h-12 w-12 justify-center flex items-center">
                 <img
                   src={stats.img}
@@ -48,7 +49,9 @@ const Statistics = () => {
               <p className="">{stats.description}</p>
             </div>
 
-            <div className="w-[4%] bg-green h-1 items-center mt-[80px]"></div>
+            {index !== statistics.length - 1 && (
+              <div className="w-[4%] bg-green h-1 items-center mt-[80px]"></div>
+            )}
           </>
         ))}
       </div>
