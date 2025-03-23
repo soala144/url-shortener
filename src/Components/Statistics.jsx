@@ -21,6 +21,7 @@ const statistics = [
 ];
 
 const Statistics = () => {
+  const margins = ["mt-10 mb-30", "mt-20 mb-20", "mt-30 mb-10"];
   return (
     <div className="w-3/4 m-auto pt-30 ">
       <div className="items-center flex flex-col">
@@ -32,10 +33,15 @@ const Statistics = () => {
           advanced statistics dashboard.
         </p>
       </div>
-      <div className="flex w-full m-auto mt-20">
+      <div className="flex w-full m-auto mt-20 mb-30 ">
         {statistics.map((stats, index) => (
           <>
-            <div className="w-[45%] bg-white px-5 relative" key={index}>
+            <div
+              className={`w-[45%] bg-white px-5 relative ${
+                margins[index]
+              } rounded-2xl ${index === 1 ? "pb-3" : ""} `}
+              key={index}
+            >
               <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2 h-12 w-12 justify-center flex items-center">
                 <img
                   src={stats.img}
@@ -46,11 +52,11 @@ const Statistics = () => {
               <h4 className="text-primary mb-4 mt-15 font-bold text-2xl">
                 {stats.title}
               </h4>
-              <p className="">{stats.description}</p>
+              <p className="mb-2">{stats.description}</p>
             </div>
 
             {index !== statistics.length - 1 && (
-              <div className="w-[4%] bg-green h-1 items-center mt-[80px]"></div>
+              <div className="w-[4%] bg-green h-1 items-center mt-[200px]"></div>
             )}
           </>
         ))}
