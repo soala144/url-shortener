@@ -5,6 +5,7 @@ const Buttons = ({
   textColor = "#eff1f7",
   bgColor = "#2bd0d0",
   borderRadius = "16px",
+  onClick,
 }) => {
   return (
     <button
@@ -14,6 +15,7 @@ const Buttons = ({
         color: textColor,
         borderRadius: borderRadius,
       }}
+      onClick={onClick}
     >
       {children}
     </button>

@@ -1,7 +1,7 @@
 import React from "react";
 import Buttons from "./Buttons";
 
-const InputSection = () => {
+const InputSection = (setShortUrl, shortUrl, setLongUrl, longUrl) => {
   return (
     <div
       className="w-3/4 m-auto opacity-80 "
@@ -15,6 +15,7 @@ const InputSection = () => {
           placeholder="Shorten URL here ..."
           className="bg-white w-[82%] h-10 rounded px-3"
         />
+        {console.log(longUrl)}
         <Buttons borderRadius="4px" className="w-[5%]">
           Shorten URL
         </Buttons>
