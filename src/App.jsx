@@ -22,7 +22,7 @@ function App() {
       />
       <>
         <div className="bg-grey mt-[-40px]">
-          <Linkview />
+          <Linkview longUrl={longUrl} shortUrl={shortUrl} />
           <Statistics />
         </div>
         <Footer />
