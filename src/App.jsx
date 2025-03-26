@@ -7,8 +7,9 @@ import Navbar from "./Components/Navbar";
 import Statistics from "./Components/Statistics";
 
 function App() {
-  const [longUrl, setLongUrl] = useState("bb");
+  const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col m-auto w-full">
       {console.log(longUrl)}
@@ -19,10 +20,11 @@ function App() {
         longUrl={longUrl}
         shortUrl={shortUrl}
         setShortUrl={setShortUrl}
+        setIsOpen={setIsOpen}
       />
       <>
         <div className="bg-grey mt-[-40px]">
-          <Linkview longUrl={longUrl} shortUrl={shortUrl} />
+          <Linkview longUrl={longUrl} shortUrl={shortUrl} isOpen={isOpen} />
           <Statistics />
         </div>
         <Footer />
