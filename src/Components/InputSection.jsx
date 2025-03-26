@@ -32,6 +32,7 @@ const InputSection = ({
       }
 
       setIsOpen(true);
+      setSavedUrl(longUrl);
     } catch (error) {
       console.error("Failed to shorten URL:", error);
     }
