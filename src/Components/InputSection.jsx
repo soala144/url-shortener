@@ -1,18 +1,31 @@
 import React from "react";
 import Buttons from "./Buttons";
-
+const API_KEY = "7qTNEpl8HBS660N78jjpX0yj9JE0JOE9UAkbisq2YmRcT0h9KEpzW8N7IAmO";
 const InputSection = ({ setShortUrl, setLongUrl, longUrl }) => {
-  const shortenUrl = async () => {
+  const handleShorten = async () => {
     try {
-      const res = await fetch("/api/shorten/", {
+      const response = await fetch("https://api.tinyurl.com/create", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${API_KEY}`,
+        },
         body: JSON.stringify({ url: longUrl }),
       });
-      const data = await res.json();
-      setShortUrl(data.shortUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data?.data?.tiny_url) {
+        setShortUrl(data.data.tiny_url);
+      } else {
+        console.error("Error in response data:", data);
+      }
     } catch (error) {
-      console.error("Error Shortening Url", error);
+      console.error("Failed to shorten URL:", error);
     }
   };
   return (
@@ -31,7 +44,7 @@ const InputSection = ({ setShortUrl, setLongUrl, longUrl }) => {
           onChange={(e) => setLongUrl(e.target.value)}
         />
         {console.log(longUrl)}
-        <Buttons borderRadius="4px" className="w-[5%]" onClick={shortenUrl}>
+        <Buttons borderRadius="4px" className="w-[5%]" onClick={handleShorten}>
           Shorten URL
         </Buttons>
       </div>

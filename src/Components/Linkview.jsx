@@ -8,7 +8,7 @@ const Linkview = ({ shortUrl, longUrl }) => {
         {longUrl}
       </a>
       <div className="w-[30%] flex gap-2 ml-6 ">
-        <a href="">{shortUrl}</a>
+        <a href={shortUrl}>{shortUrl}</a>
         <Buttons>Copy</Buttons>
       </div>
     </div>
