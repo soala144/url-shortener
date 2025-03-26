@@ -10,6 +10,7 @@ function App() {
   const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [savedUrl, setSavedUrl] = useState("");
   return (
     <div className="flex flex-col m-auto w-full">
       {console.log(longUrl)}
@@ -21,10 +22,16 @@ function App() {
         shortUrl={shortUrl}
         setShortUrl={setShortUrl}
         setIsOpen={setIsOpen}
+        setSavedUrl={setSavedUrl}
       />
       <>
         <div className="bg-grey mt-[-40px]">
-          <Linkview longUrl={longUrl} shortUrl={shortUrl} isOpen={isOpen} />
+          <Linkview
+            longUrl={longUrl}
+            shortUrl={shortUrl}
+            isOpen={isOpen}
+            savedUrl={savedUrl}
+          />
           <Statistics />
         </div>
         <Footer />

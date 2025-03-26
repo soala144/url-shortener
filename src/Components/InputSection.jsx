@@ -1,7 +1,13 @@
 import React from "react";
 import Buttons from "./Buttons";
 const API_KEY = "7qTNEpl8HBS660N78jjpX0yj9JE0JOE9UAkbisq2YmRcT0h9KEpzW8N7IAmO";
-const InputSection = ({ setShortUrl, setLongUrl, longUrl, setIsOpen }) => {
+const InputSection = ({
+  setShortUrl,
+  setLongUrl,
+  longUrl,
+  setIsOpen,
+  setSavedUrl,
+}) => {
   const handleShorten = async () => {
     try {
       const response = await fetch("https://api.tinyurl.com/create", {
@@ -24,8 +30,8 @@ const InputSection = ({ setShortUrl, setLongUrl, longUrl, setIsOpen }) => {
       } else {
         console.error("Error in response data:", data);
       }
+
       setIsOpen(true);
-      setLongUrl("");
     } catch (error) {
       console.error("Failed to shorten URL:", error);
     }
