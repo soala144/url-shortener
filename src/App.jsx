@@ -13,7 +13,6 @@ function App() {
   const [savedUrl, setSavedUrl] = useState("");
   return (
     <div className="flex flex-col m-auto w-full">
-      {console.log(longUrl)}
       <Navbar />
       <Hero />
       <InputSection

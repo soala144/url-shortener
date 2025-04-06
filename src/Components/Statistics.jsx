@@ -33,11 +33,11 @@ const Statistics = () => {
           advanced statistics dashboard.
         </p>
       </div>
-      <div className="flex w-full m-auto mt-20 mb-30 ">
+      <div className="flex-col flex md:flex-row w-full m-auto mt-20 mb-30 ">
         {statistics.map((stats, index) => (
           <>
             <div
-              className={`w-[45%] bg-white px-5 relative ${
+              className={`mb-0 w-full pb-5 md:w-[45%] bg-white px-5 relative md:${
                 margins[index]
               } rounded-2xl ${index === 1 ? "pb-3" : ""} `}
               key={index}
@@ -56,7 +56,7 @@ const Statistics = () => {
             </div>
 
             {index !== statistics.length - 1 && (
-              <div className="w-[4%] bg-green h-1 items-center mt-[200px]"></div>
+              <div className="h-2/3 md:w-[4%] bg-green md:h-1 items-center md:mt-[200px]"></div>
             )}
           </>
         ))}
