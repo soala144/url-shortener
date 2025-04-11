@@ -20,12 +20,12 @@ const Navbar = () => {
           <Buttons>Sign Up</Buttons>
         </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-10">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
       {isOpen && (
-        <div className="w-1/3 m-auto ">
+        <div className="m-auto fixed top-[10%] w-full p-8 bg-white z-50">
           <ul className="md:hidden flex justify-between gap-4 flex-col mt-2 w-full ml-auto text-gray-300 text-xs py-2 ">
             <li>Features</li>
             <li>Pricing</li>
