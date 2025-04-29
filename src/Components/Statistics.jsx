@@ -4,19 +4,19 @@ const statistics = [
     title: "Brand Recognition",
     description:
       "Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.",
-    img: "src/assets/images/icon-brand-recognition.svg",
+    img: "/images/icon-brand-recognition.svg",
   },
   {
     title: "Detailed Records",
     description:
       "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
-    img: "src/assets/images/icon-detailed-records.svg",
+    img: "/images/icon-detailed-records.svg",
   },
   {
     title: "Fully Customizable",
     description:
       "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
-    img: "src/assets/images/icon-fully-customizable.svg",
+    img: "/images/icon-fully-customizable.svg",
   },
 ];
 

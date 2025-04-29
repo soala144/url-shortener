@@ -42,7 +42,7 @@ const InputSection = ({
     <div
       className="w-3/4 m-auto opacity-80 "
       style={{
-        background: "url('src/assets/images/bg-shorten-desktop.svg'), #3a3054",
+        background: "url('/images/bg-shorten-desktop.svg'), #3a3054",
       }}
     >
       <div className="w-3/4 p-4 flex justify-between items-center rounded-lg m-auto">

@@ -7,7 +7,7 @@ const Footer = () => {
       {/* Top of the footer */}
       <div
         style={{
-          background: "url('src/assets/images/bg-boost-desktop.svg'), #3a3054",
+          background: "url('/images/bg-boost-desktop.svg'), #3a3054",
         }}
       >
         <div className="items-center justify-center flex flex-col p-4">
