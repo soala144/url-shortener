@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className=" w-3/4 flex justify-between items-center mt-6 bg-white m-auto">
+      <nav className="relative w-3/4 flex justify-between items-center mt-6 bg-white m-auto">
         <div className="flex justify-between gap-4">
           <Logo />
           <Nav isOpen={isOpen} />
@@ -25,7 +25,7 @@ const Navbar = () => {
         </button>
       </nav>
       {isOpen && (
-        <div className="m-auto fixed top-[10%] w-full p-8 bg-white z-50">
+        <div className="m-auto absolute top-[12%] w-full p-8 bg-white z-50">
           <ul className="md:hidden flex justify-between gap-4 flex-col mt-2 w-full ml-auto text-gray-300 text-xs py-2 ">
             <li>Features</li>
             <li>Pricing</li>

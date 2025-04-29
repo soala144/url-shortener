@@ -19,14 +19,14 @@ const Footer = () => {
       </div>
       {/* Bottom */}
       <div className="bg-primary">
-        <div className="w-3/4 flex m-auto mt-5">
+        <div className="w-3/4 flex flex-col sm:flex-row m-auto mt-5">
           {/* Logo */}
           <div className="w-[10%] ">
             <h3 className="text-2xl text-grey font-bold">Shortly</h3>
           </div>
           {/* Rest */}
           <div className=" m-auto w-[60%] ">
-            <div className="flex flex-row justify-between gap-3">
+            <div className="flex sm:flex-row flex-col justify-between gap-3">
               <div>
                 <h6 className="text-grey text-base font-bold mb-2">Features</h6>
                 <ul className="text-gray-400  text-sm">
