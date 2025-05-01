@@ -12,7 +12,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [savedUrl, setSavedUrl] = useState("");
   return (
-    <div className="flex flex-col m-auto w-full">
+    <div className="flex flex-col">
       <Navbar />
       <Hero />
       <InputSection
