@@ -37,9 +37,9 @@ const Statistics = () => {
         {statistics.map((stats, index) => (
           <>
             <div
-              className={`mb-0 w-full pb-5 md:w-[45%] bg-white px-5 relative md:${
+              className={`mb-2 w-full pb-5 md:w-[45%] bg-white px-5 relative md:${
                 margins[index]
-              } rounded-2xl ${index === 1 ? "pb-3" : ""} `}
+              } rounded-2xl md:${index === 1 ? "pb-3" : ""} `}
               key={index}
             >
               <figure className=" absolute rounded-full -top-6 left-1/5 transform bg-firstpurple -translate-x-1/2 h-12 w-12 justify-center flex items-center">

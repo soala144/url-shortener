@@ -11,10 +11,12 @@ function App() {
   const [shortUrl, setShortUrl] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [savedUrl, setSavedUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <div className="flex flex-col">
       <Navbar />
       <Hero />
+
       <InputSection
         setLongUrl={setLongUrl}
         longUrl={longUrl}
@@ -22,6 +24,8 @@ function App() {
         setShortUrl={setShortUrl}
         setIsOpen={setIsOpen}
         setSavedUrl={setSavedUrl}
+        setIsLoading={setIsLoading}
+        isLoading={isLoading}
       />
       <>
         <div className="bg-grey mt-[-40px]">
@@ -30,6 +34,7 @@ function App() {
             shortUrl={shortUrl}
             isOpen={isOpen}
             savedUrl={savedUrl}
+            isLoading={isLoading}
           />
           <Statistics />
         </div>

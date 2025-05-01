@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className=" w-3/4 flex justify-between items-center mt-6 bg-white m-auto">
+      <nav className=" w-3/4 flex justify-between rounded-3xl z-50 fixed left-13 items-center py-6 px-8 mt-3 md:left-36 bg-white m-auto">
         <div className="flex justify-between gap-4">
           <Logo />
           <Nav isOpen={isOpen} />
@@ -25,11 +25,11 @@ const Navbar = () => {
         </button>
       </nav>
       {isOpen && (
-        <div className="w-1/3 m-auto ">
-          <ul className="md:hidden flex justify-between gap-4 flex-col mt-2 w-full ml-auto text-gray-300 text-xs py-2 ">
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
+        <div className="w-3/4 m-auto fixed top-16 right-7 rounded-xl py-5 z-100 bg-firstpurple items-center justify-center">
+          <ul className="md:hidden flex justify-between gap-4 flex-col w-3/4 m-auto text-gray-300 text-xs py-3 ">
+            <li className="text-center">Features</li>
+            <li className="text-center">Pricing</li>
+            <li className="text-center">Resources</li>
             <Buttons bgColor="#fff" textColor=" #34313d">
               Login
             </Buttons>

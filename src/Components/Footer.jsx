@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 
 const Footer = () => {
   return (
-    <div className="w-full m-auto flex flex-col">
+    <div className="w-full m-auto pb-3 flex flex-col">
       {/* Top of the footer */}
       <div
         style={{
@@ -55,13 +55,10 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-row justify-between gap-3 w-5 h-5">
-                <img src="src\assets\images\icon-facebook.svg" alt="facebook" />
-                <img src="src\assets\images\icon-twitter.svg" alt="X" />
-                <img
-                  src="src\assets\images\icon-pinterest.svg"
-                  alt="Pinterest"
-                />
-                <img src="src\assets\images\icon-instagram.svg" alt="IG" />
+                <img src="/images/icon-facebook.svg" alt="facebook" />
+                <img src="/images/icon-twitter.svg" alt="X" />
+                <img src="/images/icon-pinterest.svg" alt="Pinterest" />
+                <img src="/images/icon-instagram.svg" alt="IG" />
               </div>
             </div>
           </div>

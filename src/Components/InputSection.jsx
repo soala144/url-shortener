@@ -7,8 +7,11 @@ const InputSection = ({
   longUrl,
   setIsOpen,
   setSavedUrl,
+  setIsLoading,
+  isLoading,
 }) => {
   const handleShorten = async () => {
+    setIsLoading(true);
     try {
       const response = await fetch("https://api.tinyurl.com/create", {
         method: "POST",
@@ -30,7 +33,7 @@ const InputSection = ({
       } else {
         console.error("Error in response data:", data);
       }
-
+      setIsLoading(false);
       setIsOpen(true);
       setSavedUrl(longUrl);
       setLongUrl("");
@@ -40,23 +43,27 @@ const InputSection = ({
   };
   return (
     <div
-      className="w-3/4 m-auto opacity-80 "
+      className="md:w-3/4 w-[95%] rounded m-auto opacity-80"
       style={{
         background: "url('/images/bg-shorten-desktop.svg'), #3a3054",
       }}
     >
-      <div className="w-3/4 p-4 flex justify-between items-center rounded-lg m-auto">
+      <div className="md:w-3/4 w-[95%] p-4 flex gap-4 flex-col md:flex-row justify-between items-center rounded-lg m-auto">
         <input
           type="text"
           placeholder="Shorten URL here ..."
-          className="bg-white w-[82%] h-10 rounded px-3"
+          className="bg-white md:w-[82%] w-full  h-10 rounded px-3"
           value={longUrl}
           onChange={(e) => setLongUrl(e.target.value)}
         />
         {console.log(longUrl)}
-        <Buttons borderRadius="4px" className="w-[5%]" onClick={handleShorten}>
+        <button
+          className="md:w-[5%] w-full py-3 px-5 text-lg rounded text-grey bg-green"
+          onClick={handleShorten}
+          disabled={isLoading}
+        >
           Shorten URL
-        </Buttons>
+        </button>
       </div>
     </div>
   );
